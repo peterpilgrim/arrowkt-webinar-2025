@@ -30,13 +30,14 @@ dependencies {
 }
 
 kotlin {
-    jvmToolchain(21)
+    jvmToolchain(24)
+    // SEE ALSO: Strange "Inconsistent JVM Target Compatibility" warning
+    // https://youtrack.jetbrains.com/issue/KT-80096/Strange-Inconsistent-JVM-Target-Compatibility-warning
 }
 
 tasks.test {
     useJUnitPlatform()
 }
-
 
 application {
     mainClass.set("uk.co.xenonique.javatechcoach.arrow.MainKt")
